@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>What Key Is That?</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <div id="container">
+        <div id="chord-name" v-cloak>
+            {{ chord.name }}
+        </div>
+        <div id="scale-degree" v-cloak>
+          {{ romanise(scaleDegree) }}
+        </div>
+        <div id="key-input-container">
+          <input v-model="enteredKey" v-on:change="enter" placeholder="What key is that?" type="text" id="key-input">
+        </div>
+      </div>
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>

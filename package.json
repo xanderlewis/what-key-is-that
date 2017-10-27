@@ -1,0 +1,26 @@
+{
+  "name": "what-key-is-that",
+  "version": "1.0.0",
+  "description": "What chords are from what key?",
+  "author": "Xander Lewis <me@xanderlewis.co.uk>",
+  "scripts": {
+    "build": "browserify ./js/index.js -o bundle.js",
+    "watch": "watchify ./js/index.js -o bundle.js",
+    "test": "mocha",
+    "server": "python -m SimpleHTTPServer 8080"
+  },
+  "dependencies": {
+    "teoria": "^2.5.0",
+    "vue": "^2.5.2"
+  },
+  "devDependencies": {
+    "browserify": "^14.5.0",
+    "chai": "^4.1.2",
+    "eslint": "^4.9.0",
+    "mocha": "^4.0.1",
+    "watchify": "^3.9.0"
+  },
+  "browser": {
+    "vue": "vue/dist/vue.common.js"
+  }
+}
