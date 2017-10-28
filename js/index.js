@@ -3,6 +3,7 @@ const generate = require('./generate.js');
 
 // Generate a random chord
 const possibleScaleDegrees = [1,2,3,4,5,6,7];
+const possibleKeys = ['C', 'F', 'Bb', 'Eb', 'Ab', 'Db', 'Gb', 'B', 'E', 'A', 'D', 'G'];
 function newChord() {
     return generate.randomDiatonicChordFromMajorKey(possibleScaleDegrees);
 }
@@ -16,18 +17,19 @@ const vm = new Vue({
         chord: firstChord,
         scaleDegree: firstChord.scaleDegree,
         correctKey: firstChord.key,
-        enteredKey: '',
-        
+        enteredKey: ''
     },
     watch: {
         enteredKey: function(key) {
             // Correct formatting of entered key
             if (key.length == 1) {
-                this.enteredKey = key.toUpperCase();
-            } else {
-                const head = key.charAt(0);
-                const tail = key.slice(1);
-                this.enteredKey = head.toUpperCase() + tail.toLowerCase();
+                if (possibleKeys.includes(key.toUpperCase())) {
+                    this.enteredKey = key.toUpperCase();
+                } else {
+                    this.enteredKey = '';
+                }
+            } else if (!(key.charAt(1) == '#' || key.charAt(1) == 'b')) {
+                this.enteredKey = this.enteredKey.slice(0, 1);
             }
         }
     },

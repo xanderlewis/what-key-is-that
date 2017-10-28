@@ -1,7 +1,7 @@
 html, body {
     background-color: white;
     color: #333333;
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: 'Passion One', Helvetica, Arial, sans-serif;
     box-sizing: border-box;
 }
 
@@ -17,7 +17,7 @@ html, body {
 
 #chord-name {
     font-size: 8em;
-    font-weight: 800;
+    font-weight: 400;
     text-shadow: 0px 4px 0px rgba(0,0,0,0.1);
     margin-bottom: 0;
 }
@@ -26,11 +26,11 @@ html, body {
     font-family: 'Playfair Display', serif;
     font-size: 2em;
     font-weight: 400;
-    margin-top: 0;
+    margin-top: -20px;
 }
 
 #key-input-container {
-    margin-top: 6vh;
+    margin-top: 8vh;
 }
 
 #key-input {
@@ -43,6 +43,7 @@ html, body {
     -box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
     padding-top: 2px;
     padding-bottom: 2px;
+    background-color: rgba(0,0,0,0.03);
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
@@ -61,4 +62,42 @@ html, body {
 }
 ::-ms-input-placeholder {
    color: #cccccc;
+}
+
+#footer {
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    margin-left: -120px;
+    font-size: 14px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    width: 240px;
+    height: 52px;
+    text-align: center;
+    color: rgba(0,0,0,0.2);
+    font-weight: 200;
+    text-decoration: none;
+}
+
+#footer:hover {
+    text-decoration: underline;
+}
+
+@keyframes popup {
+    0% {
+        transform: translateY(80px);
+    }
+
+    30% {
+        transform: translateY(30px);
+    }
+
+    60% {
+        transform: translateY(44px);
+    }
+
+    100% {
+        transform: translateY(40px);
+    }
 }

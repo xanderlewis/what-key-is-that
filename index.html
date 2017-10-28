@@ -5,6 +5,9 @@
     <title>What Key Is That?</title>
     <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Passion+One:400" rel="stylesheet">
+    
+    
   </head>
   <body>
     <div id="app">
@@ -16,10 +19,11 @@
           {{ romanise(scaleDegree) }}
         </div>
         <div id="key-input-container">
-          <input v-model="enteredKey" v-on:change="enter" placeholder="What key is that?" type="text" id="key-input">
+          <input v-model="enteredKey" v-on:change="enter" placeholder="What key is that?" type="text" id="key-input" maxlength="2">
         </div>
       </div>
     </div>
+    <a id="footer" href="http://xanderlewis.co.uk">xanderlewis.co.uk</a>
     <script src="bundle.js"></script>
   </body>
 </html>
