@@ -31,6 +31,7 @@ html, body {
 
 #key-input-container {
     margin-top: 8vh;
+    margin-bottom: 8vh;
 }
 
 #key-input {
@@ -64,6 +65,26 @@ html, body {
    color: #cccccc;
 }
 
+#scale-degree-select {
+    font-family: 'Playfair Display';
+    font-weight: 100;
+    width: 30vw;
+    min-width: 280px;
+    text-align: center;
+    border: 1px rgba(0,0,0,0.05) solid;
+    margin: 0 auto;
+}
+
+#scale-degree-select legend {
+    font-weight: 700;
+}
+
+#scale-degree-select input[type="checkbox"] {
+    width: 12px;
+    height: 12px;
+    background-color: pink;
+}
+
 #footer {
     margin: 0;
     position: fixed;
@@ -82,22 +103,4 @@ html, body {
 
 #footer:hover {
     text-decoration: underline;
-}
-
-@keyframes popup {
-    0% {
-        transform: translateY(80px);
-    }
-
-    30% {
-        transform: translateY(30px);
-    }
-
-    60% {
-        transform: translateY(44px);
-    }
-
-    100% {
-        transform: translateY(40px);
-    }
 }

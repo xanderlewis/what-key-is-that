@@ -21,6 +21,23 @@
         <div id="key-input-container">
           <input v-model="enteredKey" v-on:change="enter" placeholder="What key is that?" type="text" id="key-input" maxlength="2">
         </div>
+        <fieldset id="scale-degree-select">
+          <legend>Scale degrees</legend>
+          <input type="checkbox" id="sd-1" value="1" checked v-model="scaleDegreesEnabled">
+          <label for="sd-1">I</label>
+          <input type="checkbox" id="sd-2" value="2" checked v-model="scaleDegreesEnabled">
+          <label for="sd-1">II</label>
+          <input type="checkbox" id="sd-3" value="3" checked v-model="scaleDegreesEnabled">
+          <label for="sd-1">III</label>
+          <input type="checkbox" id="sd-4" value="4" checked v-model="scaleDegreesEnabled">
+          <label for="sd-1">IV</label>
+          <input type="checkbox" id="sd-5" value="5" checked v-model="scaleDegreesEnabled">
+          <label for="sd-1">V</label>
+          <input type="checkbox" id="sd-6" value="6" checked v-model="scaleDegreesEnabled">
+          <label for="sd-1">VI</label>
+          <input type="checkbox" id="sd-7" value="7" checked v-model="scaleDegreesEnabled">
+          <label for="sd-1">VII</label>
+        </fieldset>
       </div>
     </div>
     <a id="footer" href="http://xanderlewis.co.uk">xanderlewis.co.uk</a>
