@@ -23,20 +23,20 @@
         </div>
         <fieldset id="scale-degree-select">
           <legend>Scale degrees</legend>
-          <input type="checkbox" id="sd-1" value="1" checked v-model="scaleDegreesEnabled">
+          <input type="checkbox" id="sd-1" value="1" checked v-model="scaleDegreesEnabled" v-on:change="newChord">
           <label for="sd-1">I</label>
-          <input type="checkbox" id="sd-2" value="2" checked v-model="scaleDegreesEnabled">
-          <label for="sd-1">II</label>
-          <input type="checkbox" id="sd-3" value="3" checked v-model="scaleDegreesEnabled">
-          <label for="sd-1">III</label>
-          <input type="checkbox" id="sd-4" value="4" checked v-model="scaleDegreesEnabled">
-          <label for="sd-1">IV</label>
-          <input type="checkbox" id="sd-5" value="5" checked v-model="scaleDegreesEnabled">
-          <label for="sd-1">V</label>
-          <input type="checkbox" id="sd-6" value="6" checked v-model="scaleDegreesEnabled">
-          <label for="sd-1">VI</label>
-          <input type="checkbox" id="sd-7" value="7" checked v-model="scaleDegreesEnabled">
-          <label for="sd-1">VII</label>
+          <input type="checkbox" id="sd-2" value="2" checked v-model="scaleDegreesEnabled" v-on:change="newChord">
+          <label for="sd-2">II</label>
+          <input type="checkbox" id="sd-3" value="3" checked v-model="scaleDegreesEnabled" v-on:change="newChord">
+          <label for="sd-3">III</label>
+          <input type="checkbox" id="sd-4" value="4" checked v-model="scaleDegreesEnabled" v-on:change="newChord">
+          <label for="sd-4">IV</label>
+          <input type="checkbox" id="sd-5" value="5" checked v-model="scaleDegreesEnabled" v-on:change="newChord">
+          <label for="sd-5">V</label>
+          <input type="checkbox" id="sd-6" value="6" checked v-model="scaleDegreesEnabled" v-on:change="newChord">
+          <label for="sd-6">VI</label>
+          <input type="checkbox" id="sd-7" value="7" checked v-model="scaleDegreesEnabled" v-on:change="newChord">
+          <label for="sd-7">VII</label>
         </fieldset>
       </div>
     </div>

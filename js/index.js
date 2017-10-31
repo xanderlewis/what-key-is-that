@@ -36,9 +36,7 @@ const vm = new Vue({
             // Check if entered key is correct
             if (this.enteredKey == this.correctKey) {
                 // Show new chord
-                this.chord = generate.randomDiatonicChordFromMajorKey(this.scaleDegreesEnabled.map(x => Number(x)));
-                this.scaleDegree = this.chord.scaleDegree;
-                this.correctKey = this.chord.key;
+                this.newChord();
 
                 // Clear entered key
                 this.enteredKey = '';
@@ -56,6 +54,11 @@ const vm = new Vue({
             while (i--)
                 roman = (key[+digits.pop() + (i * 10)] || '') + roman;
             return Array(+digits.join('') + 1).join('M') + roman;
+        },
+        newChord: function() {
+            this.chord = generate.randomDiatonicChordFromMajorKey(this.scaleDegreesEnabled.map(x => Number(x)));
+            this.scaleDegree = this.chord.scaleDegree;
+            this.correctKey = this.chord.key;
         }
     }
 });
