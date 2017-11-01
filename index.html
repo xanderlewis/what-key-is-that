@@ -21,6 +21,7 @@
         <div id="key-input-container">
           <input v-model="enteredKey" v-on:change="enter" placeholder="What key is that?" type="text" id="key-input" maxlength="2">
         </div>
+        <div id="score">{{ score }} chord{{plural()}} correct today</div>
         <fieldset id="scale-degree-select">
           <legend>Scale degrees</legend>
           <input type="checkbox" id="sd-1" value="1" checked v-model="scaleDegreesEnabled" v-on:change="newChord">

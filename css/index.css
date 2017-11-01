@@ -30,8 +30,16 @@ html, body {
 }
 
 #key-input-container {
-    margin-top: 8vh;
-    margin-bottom: 8vh;
+    margin-top: 4vh;
+    margin-bottom: 2vh;
+}
+
+#score {
+    font-family: 'Playfair Display', serif;
+    font-weight: 100;
+    font-size: 0.8em;
+    color: rgba(0,0,0,0.4);
+    margin-bottom: 12vh;
 }
 
 #key-input {
@@ -47,22 +55,20 @@ html, body {
     background-color: rgba(0,0,0,0.03);
 }
 
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+::-webkit-input-placeholder {
     color: rgba(0,0,0,0.6);
 }
 :-moz-placeholder {
-   color: #cccccc;
-   opacity:  1;
+   color: rgba(0,0,0,0.6);
 }
 ::-moz-placeholder {
-   color: #cccccc;
-   opacity:  1;
+   color: rgba(0,0,0,0.6);
 }
 :-ms-input-placeholder {
-   color: #cccccc;
+   color: rgba(0,0,0,0.6);
 }
 ::-ms-input-placeholder {
-   color: #cccccc;
+   color: rgba(0,0,0,0.6);
 }
 
 #scale-degree-select {

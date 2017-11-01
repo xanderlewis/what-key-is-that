@@ -16,6 +16,7 @@ const vm = new Vue({
         correctKey: firstChord.key,
         enteredKey: '',
         scaleDegreesEnabled: initialScaleDegreesEnabled,
+        score: document.cookie.match(/score=(.*)/) != null ? Number(document.cookie.match(/score=(.*)/)[1]) : 0
     },
     watch: {
         enteredKey: function(key) {
@@ -37,6 +38,9 @@ const vm = new Vue({
             if (this.enteredKey == this.correctKey) {
                 // Show new chord
                 this.newChord();
+
+                // Increase score
+                this.incrementScore();
 
                 // Clear entered key
                 this.enteredKey = '';
@@ -65,6 +69,24 @@ const vm = new Vue({
             this.chord = generatedChord;
             this.scaleDegree = this.chord.scaleDegree;
             this.correctKey = this.chord.key;
+        },
+        incrementScore: function() {
+            // Update store
+            this.score += 1;
+
+            // Update/create cookie
+            const date = new Date();
+            date.setHours(23);
+            date.setMinutes(59);
+            date.setSeconds(59);
+            document.cookie = `score=${this.score};expires=${date}`;
+        },
+        plural: function() {
+            if (this.score == 1) {
+                return '';
+            } else {
+                return 's';
+            }
         }
     }
 });
