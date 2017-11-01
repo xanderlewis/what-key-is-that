@@ -56,7 +56,13 @@ const vm = new Vue({
             return Array(+digits.join('') + 1).join('M') + roman;
         },
         newChord: function() {
-            this.chord = generate.randomDiatonicChordFromMajorKey(this.scaleDegreesEnabled.map(x => Number(x)));
+            let generatedName = this.chord.name;
+            let generatedChord;
+            while (generatedName == this.chord.name) {
+                generatedChord = generate.randomDiatonicChordFromMajorKey(this.scaleDegreesEnabled.map(x => Number(x)));
+                generatedName = generatedChord.name;
+            }
+            this.chord = generatedChord;
             this.scaleDegree = this.chord.scaleDegree;
             this.correctKey = this.chord.key;
         }
